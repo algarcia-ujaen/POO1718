@@ -20,6 +20,16 @@ Polygon::Polygon( int nEdges): _nEdges (nEdges)
     {
         throw std::invalid_argument
     }
+    
+    for ( int i = 0; i < _nEdges; i++ )
+    {
+        _edges[i] = new SegmentComp();
+    }
+    
+    for (int i = _nEdges; i < MAX_EDGES; i++) {
+        _edges[i] = 0;
+    }
+
 }
 
 Polygon::Polygon(const Polygon& orig) {
@@ -28,3 +38,7 @@ Polygon::Polygon(const Polygon& orig) {
 Polygon::~Polygon() {
 }
 
+float Polygon::area ()
+{
+    return (0);
+}

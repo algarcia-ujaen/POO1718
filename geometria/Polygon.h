@@ -23,6 +23,8 @@ public:
     Polygon( int nEdges = 3 );
     Polygon(const Polygon& orig);
     virtual ~Polygon();
+    float area ();
+
 private:
     SegmentComp* _edges[MAX_EDGES];
     int _nEdges;
