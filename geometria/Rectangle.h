@@ -22,8 +22,10 @@ public:
     Rectangle(const Rectangle& orig);
     virtual ~Rectangle();
     float area();
+    void newEdge ( SegmentComp& nE );
+    void newEdge ( Point2D& p1, Point2D& p2 );
 private:
-
+    int _color[3];
 };
 
 #endif /* RECTANGLE_H */

@@ -11,12 +11,18 @@
  * Created on 2 de abril de 2018, 12:13
  */
 
+#include <stdexcept>
+
 #include "Rectangle.h"
 
-Rectangle::Rectangle(): Polygon (4) {
+Rectangle::Rectangle(): Polygon (4), _color{0,0,0} {
 }
 
-Rectangle::Rectangle(const Rectangle& orig) {
+Rectangle::Rectangle(const Rectangle& orig): Polygon ( orig ){
+    for ( int i = 0; i < 3; i++ )
+    {
+        _color[i] = orig._color[i];
+    }
 }
 
 Rectangle::~Rectangle() {
@@ -29,4 +35,10 @@ float Rectangle::area()
     // Compute area of triangle 2-3-0
     // Add areas and return the result
 }
+
+void Rectangle::newEdge ( SegmentComp& nE )
+{
+    throw std::runtime_error
+}
+void newEdge ( Point2D& p1, Point2D& p2 );
 

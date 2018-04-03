@@ -24,6 +24,11 @@ SegmentComp::SegmentComp(const SegmentComp& orig): _start (0),
    _end = new Point2D ( *(orig._end) );
 }
 
+SegmentComp::SegmentComp ( Point2D& start, Point2D& end ): _start ( start ),
+                                                           _end ( end )
+{ }
+
+
 SegmentComp::~SegmentComp() {
     delete _start;
     _start = 0;

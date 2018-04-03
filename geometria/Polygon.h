@@ -24,6 +24,8 @@ public:
     Polygon(const Polygon& orig);
     virtual ~Polygon();
     float area ();
+    void newEdge ( SegmentComp& nE );
+    void newEdge ( Point2D& p1, Point2D &p2 );
 
 private:
     SegmentComp* _edges[MAX_EDGES];

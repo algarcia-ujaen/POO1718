@@ -19,6 +19,7 @@
 class SegmentComp {
 public:
     SegmentComp();
+    SegmentComp ( Point2D& start, Point2D& end );
     SegmentComp(const SegmentComp& orig);
     virtual ~SegmentComp();
 private:
