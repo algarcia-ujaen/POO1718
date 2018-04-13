@@ -38,7 +38,7 @@ float Rectangle::area()
 
 void Rectangle::newEdge ( SegmentComp& nE )
 {
-    throw std::runtime_error
+    throw std::runtime_error ("asdf");
 }
 void newEdge ( Point2D& p1, Point2D& p2 );
 

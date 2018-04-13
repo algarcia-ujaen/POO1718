@@ -26,6 +26,8 @@ public:
     float area ();
     void newEdge ( SegmentComp& nE );
     void newEdge ( Point2D& p1, Point2D &p2 );
+    bool operator> ( Polygon& other );
+    Polygon& operator= ( Polygon& other );
 
 private:
     SegmentComp* _edges[MAX_EDGES];

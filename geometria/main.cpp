@@ -16,6 +16,7 @@
 #include <math.h>
 #include "Point2D.h"
 #include "SegmentComp.h"
+#include "templates.h"
 
 using std::cout;
 
@@ -39,6 +40,10 @@ int main(int argc, char** argv) {
 //
     SegmentComp s1;
     SegmentComp s2 (s1);
+    
+    Polygon p1;
+    Polygon p2;
+    Polygon p3 = max ( p1, p2 );
 
     return 0;
 }
