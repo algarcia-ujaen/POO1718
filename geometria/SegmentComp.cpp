@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   SegmentComp.cpp
  * Author: algarcia
- * 
+ *
  * Created on 13 de marzo de 2018, 10:55
  */
 
@@ -24,12 +24,13 @@ SegmentComp::SegmentComp(const SegmentComp& orig): _start (0),
    _end = new Point2D ( *(orig._end) );
 }
 
-SegmentComp::SegmentComp ( Point2D& start, Point2D& end ): _start ( start ),
-                                                           _end ( end )
+SegmentComp::SegmentComp ( Point2D& start, Point2D& end ): _start ( &start ),
+                                                           _end ( &end )
 { }
 
 
-SegmentComp::~SegmentComp() {
+SegmentComp::~SegmentComp()
+{
     delete _start;
     _start = 0;
     delete _end;

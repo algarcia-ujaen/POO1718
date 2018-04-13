@@ -35,7 +35,11 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/Point2D.o \
+	${OBJECTDIR}/Polygon.o \
 	${OBJECTDIR}/Rectangle.o \
+	${OBJECTDIR}/SegmentAgg.o \
+	${OBJECTDIR}/SegmentComp.o \
 	${OBJECTDIR}/main.o
 
 
@@ -63,10 +67,30 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/geometria: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/geometria ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/Point2D.o: Point2D.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Point2D.o Point2D.cpp
+
+${OBJECTDIR}/Polygon.o: Polygon.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Polygon.o Polygon.cpp
+
 ${OBJECTDIR}/Rectangle.o: Rectangle.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Rectangle.o Rectangle.cpp
+
+${OBJECTDIR}/SegmentAgg.o: SegmentAgg.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SegmentAgg.o SegmentAgg.cpp
+
+${OBJECTDIR}/SegmentComp.o: SegmentComp.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SegmentComp.o SegmentComp.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}

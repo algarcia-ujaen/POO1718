@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   Point2D.cpp
  * Author: algarcia
- * 
+ *
  * Created on 19 de febrero de 2018, 11:52
  */
 
@@ -46,20 +46,31 @@ Point2D& Point2D::operator= (const Point2D& orig)
 {
     _x = orig._x;
     _y = orig._y;
-    
+
     return *this;
 }
 
 bool Point2D::operator== ( const Point2D& other )
 {
-    return ( _x == other._x ) && ( _y == other._y );
+   bool returnValue = false;
+
+   if ( ( this == &other ) ||
+        ( ( _x == other._x ) &&
+          ( _y == other._y )
+        )
+      )
+   {
+      returnValue = true;
+   }
+
+   return returnValue;
 }
 
-Point2D& Point2D::operator+ ( const Point2D &other )
+Point2D& Point2D::operator+= ( const Point2D &other )
 {
     this->_x += other._x;
     this->_y += other._y;
-    
+
     return (*this);
 }
 
@@ -67,7 +78,7 @@ float Point2D::operator- ( const Point2D &other )
 {
     float dX = _x - other._x;
     float dY = _y - other._y;
-    
+
     return ( sqrt ( dX*dX + dY*dY ) );
 }
 
@@ -75,6 +86,6 @@ float Point2D::distanceTo ( const Point2D &other )
 {
     float dX = _x - other._x;
     float dY = _y - other._y;
-    
+
     return ( sqrt ( dX*dX + dY*dY ) );
 }
