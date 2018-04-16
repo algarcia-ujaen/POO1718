@@ -21,6 +21,7 @@
 #include "templates.h"
 #include "NewPoint2D.h"
 #include "NewSegmentComp.h"
+#include "Rectangle.h"
 
 using std::cout;
 
@@ -57,7 +58,7 @@ int main(int argc, char** argv) {
    pt3.setX (5.7);
    pt3.setY (8.8);
 
-   cout << pt3.distanceTo (pt4);
+   cout << pt3.distanceTo (pt4) << std::endl;
 
    ptrP5->setX (10);
    ptrP5->setY (5.3);
@@ -85,6 +86,16 @@ int main(int argc, char** argv) {
 
    delete pSt3;
    pSt3 = 0;
+
+   Polygon *pP = new Rectangle ();
+   cout << pP->area ()<< std::endl;
+
+   // NO COMPILA
+   Rectangle *pR = pP;
+   cout << pR->area () << std::endl;
+
+   delete pP;
+   pP = 0;
 
    return 0;
 }

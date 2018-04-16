@@ -39,6 +39,7 @@ float Rectangle::area()
    // Compute area of triangle 0-1-2
    // Compute area of triangle 2-3-0
    // Add areas and return the result
+   return (1);
 }
 
 void Rectangle::newEdge ( SegmentComp& nE )
