@@ -18,5 +18,17 @@
             <file>file:/home/algarcia/2017-2018/OOP/POO1718/geometria/main.cpp</file>
             <file>file:/home/algarcia/2017-2018/OOP/POO1718/geometria/Point2D.h</file>
         </group>
+        <group name="teoria">
+            <file>file:/home/algarcia/2017-2018/OOP/POO1718/geometria/Polygon.cpp</file>
+            <file>file:/home/algarcia/2017-2018/OOP/POO1718/geometria/Rectangle.cpp</file>
+            <file>file:/home/algarcia/2017-2018/OOP/POO1718/geometria/SegmentComp.h</file>
+            <file>file:/home/algarcia/2017-2018/OOP/POO1718/geometria/Rectangle.h</file>
+            <file>file:/home/algarcia/2017-2018/OOP/POO1718/geometria/Polygon.h</file>
+            <file>file:/home/algarcia/2017-2018/OOP/POO1718/geometria/SegmentComp.cpp</file>
+            <file>file:/home/algarcia/2017-2018/OOP/POO1718/geometria/templates.h</file>
+            <file>file:/home/algarcia/2017-2018/OOP/POO1718/geometria/Point2D.cpp</file>
+            <file>file:/home/algarcia/2017-2018/OOP/POO1718/geometria/main.cpp</file>
+            <file>file:/home/algarcia/2017-2018/OOP/POO1718/geometria/Point2D.h</file>
+        </group>
     </open-files>
 </project-private>

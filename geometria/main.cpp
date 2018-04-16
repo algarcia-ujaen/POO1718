@@ -57,6 +57,8 @@ int main(int argc, char** argv) {
    pt3.setX (5.7);
    pt3.setY (8.8);
 
+   cout << pt3.distanceTo (pt4);
+
    ptrP5->setX (10);
    ptrP5->setY (5.3);
 
@@ -78,6 +80,12 @@ int main(int argc, char** argv) {
    Polygon p2;
    Polygon p3 = max ( p1, p2 );
 
-    return 0;
+   delete ptrP5;
+   ptrP5 = 0;
+
+   delete pSt3;
+   pSt3 = 0;
+
+   return 0;
 }
 
