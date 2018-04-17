@@ -22,6 +22,7 @@
 #include "NewPoint2D.h"
 #include "NewSegmentComp.h"
 #include "Rectangle.h"
+#include "Pair.h"
 
 using std::cout;
 
@@ -90,12 +91,13 @@ int main(int argc, char** argv) {
    Polygon *pP = new Rectangle ();
    cout << pP->area ()<< std::endl;
 
-   // NO COMPILA
-   Rectangle *pR = pP;
+   Rectangle *pR = new Rectangle ();
    cout << pR->area () << std::endl;
 
    delete pP;
    pP = 0;
+
+   Pair<int, std::string> parejas[3];
 
    return 0;
 }

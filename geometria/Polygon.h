@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   Polygon.h
  * Author: algarcia
  *
@@ -23,7 +23,7 @@ public:
     Polygon( int nEdges = 3 );
     Polygon(const Polygon& orig);
     virtual ~Polygon();
-    float area ();
+    virtual float area ();
     void newEdge ( SegmentComp& nE );
     void newEdge ( Point2D& p1, Point2D &p2 );
     bool operator> ( Polygon& other );
@@ -32,7 +32,7 @@ public:
 private:
     SegmentComp* _edges[MAX_EDGES];
     int _nEdges;
-    
+
 
 };
 
